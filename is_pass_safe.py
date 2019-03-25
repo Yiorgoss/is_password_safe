@@ -34,11 +34,15 @@ def is_used(psswd):
     if(is_used ==  0):
         print("password: "+ psswd +" safe to use")
     elif(is_used == -1):
-        print("has to be 5 letters")
+        #helpful error messages!
+        print("something went wrong")
     else:
         print(psswd + " is currently in use: "+ is_used + " times")
 
     
 if __name__ == "__main__":
-    is_used(sys.argv[1])
+    try:
+        is_used(sys.argv[1])
+    except IndexError:
+        print("is_pass_safe.py [password]")
     sys.exit(0)
