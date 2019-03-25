@@ -1,6 +1,6 @@
-from Crypto.Hash import SHA1
 import requests
 import sys
+from Crypto.Hash import SHA1
 
 def encrypt_string(string):
     sha_signature = SHA1.new()
